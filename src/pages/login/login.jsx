@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextInput from "../../components/textInput";
 import Button from "../../components/button";
 
@@ -9,6 +9,11 @@ export default function LoginPage() {
     function handlelogin() {
         alert(`Email: ${email}, Password: ${password}`)
     }
+
+    useEffect(() => {
+       const emailregexp=/^ [a-zA-Z0-9-_.]+@[a-zA-Z] $/ 
+    },[])
+
     return (
         <React.Fragment>
             <div className="d-flex justify-content-center align-items-center" style={{ backgroundColor: "#eee", height: "100svh" }}>
