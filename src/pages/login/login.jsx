@@ -11,8 +11,18 @@ export default function LoginPage() {
     }
 
     useEffect(() => {
-       const emailregexp=/^ [a-zA-Z0-9-_.]+@[a-zA-Z] $/ 
-    },[])
+        console.log("useEffect triggered")
+        const emailregexp=/^[a-z][a-zA-Z0-9-_.]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/ 
+        if(emailregexp.test(email)) {
+            console.log("Valid email")
+        }else {
+            console.log("Invalid email")
+        }
+
+        if (password.length<=7) {
+            console.log("The password is too short")
+        }
+    },[email, password])
 
     return (
         <React.Fragment>
